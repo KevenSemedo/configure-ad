@@ -32,7 +32,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h3>Create Two Virtual Machines</h3>
 
 <p>
-<img src="https://i.imgur.com/pqp7C8d.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/VmTcasJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 To start go to portal.azure.com and create a profile or login. Create a subscription name-->Create a resource group-->Create two virtual machines-->Create a domain controller using Windows Server and a client PC using Windows 10 Pro
@@ -49,7 +49,7 @@ Open remote desktop connection and create two instances for the domain controlle
 
 <h3>Ensure Connectivity between the client and Domain Controller</h3>
 <p>
-<img src="https://i.imgur.com/b5AWooQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/qRbA9lB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 In Azure, click on Networking and from there it will open its page.  We can change the private IP address from dynamic to static so the IP address will stay the same for client's DNS to connect to the server.
@@ -57,7 +57,7 @@ In Azure, click on Networking and from there it will open its page.  We can chan
 <br />
 
 <p>
-<img src="https://i.imgur.com/gQDiGHf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/kmfxeOa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 From the networking screen, click on your Network interface name to open ipconfig from the menu.
@@ -65,7 +65,7 @@ From the networking screen, click on your Network interface name to open ipconfi
 <br />
 
 <p>
-<img src="https://i.imgur.com/56btGwo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/5XERHA8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Once your NIC settings are open click on IP Configuration-->and the 3 dots for your private IP address at the bottom of the screen.
@@ -73,7 +73,7 @@ Once your NIC settings are open click on IP Configuration-->and the 3 dots for y
 <br />
 
 <p>
-<img src="https://i.imgur.com/mhUy4vv.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/hJgPfni.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 From the ipconfig1 screen, change the assignment of the private IP address from dynamic to static.  Then click Save.
@@ -189,7 +189,7 @@ Once the group box is populated, type "domains" enter the object names to be sel
 
 <h3>Join Client-1 To Your Domain</h3>
 <p>
-<img src="https://i.imgur.com/qLYumOe.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/wpOecWE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Go to Azure and go to Virtual Machines-->Click on DC-1-->Networking and get the private IP address.  You will need this IP address to connect Client-1's DNS server.
@@ -197,7 +197,7 @@ Go to Azure and go to Virtual Machines-->Click on DC-1-->Networking and get the 
 <br />
 
 <p>
-<img src="https://i.imgur.com/PxitGw1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Q1IjN92.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 In Microsoft Azure go to virtual machines and select Client-1-->Networking-->Click on the Network interface-->DNS servers-->Select the ratio button in DNS servers from Inherit from network to Custom-->Type in DC-1's private IP address in the bar-->click Save.  Once the settings are saved you will restart Client-1 within the Azure portal and it will flush the DNS cache.
